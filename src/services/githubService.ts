@@ -63,7 +63,7 @@ export interface GitHubUser {
     }
 
   };
-  export const fetchUserContributions = async (username: string): Promise<GitHubContribution[]> => {
+  export const fetchUserContributions = async (): Promise<GitHubContribution[]> => {
 
     const mockData: GitHubContribution[] = [];
     const today = new Date();
