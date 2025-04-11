@@ -2,7 +2,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Index from "./pages/Index";
-// import NotFound from "./pages/NotFound";
+
 function App() {
   const [queryClient] = useState(() => new QueryClient());
   return (
@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* <Route path="*" element={<NotFound />} /> */}
+          <Route path="*" element={<h1>404 NOT FOUND!</h1>} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
