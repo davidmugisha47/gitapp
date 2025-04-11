@@ -1,55 +1,32 @@
-# React + TypeScript + Vite
+GitHub Profile Explorer
+A streamlined tool designed for recruiters to quickly search and preview GitHub profiles using a candidate's username.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Features
+*Search Functionality: Enter a GitHub username to fetch user information and repositories.
+*Display Candidate Info: Show avatar, name, username, location, bio, follower/following counts, and a link to the GitHub profile.
+*Repository List: Display repository name (linked to GitHub), description, star count, fork count, and primary language.
+*Sorting Options: Sort repositories by stars, name, or most recent.
+*Error Handling: Display a message if the user is not found (handle 404 error).
+*Responsive Layout: Ensure the application is responsive across devices.
 
-Currently, two official plugins are available:
+**Installation
+Clone the repository:
+git clone https://github.com/yourusername/github-profile-explorer.git
+Navigate to the project directory:
+cd github-profile-explorer
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Install dependencies:
+npm install
 
-## Expanding the ESLint configuration
+**Run the application:
+npm run dev
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Usage
+Open the application in your browser.
+Enter a GitHub username in the search field.
+Click the search button to fetch and display the user's profile and repositories.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+**API Endpoints Used
+User Information: https://api.github.com/users/[username]
+User Repositories: https://api.github.com/users/[username]/repos
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-# gitapp
