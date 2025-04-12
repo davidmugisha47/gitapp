@@ -11,7 +11,7 @@ A streamlined tool designed for recruiters to quickly search and preview GitHub 
 
 \*\*Installation
 Clone the repository:
-git clone https://github.com/yourusername/github-profile-explorer.git
+[git clone https://github.com/davidmugisha47/gitapp.git]
 Navigate to the project directory:
 cd github-profile-explorer
 
